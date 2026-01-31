@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial;
+  background: linear-gradient(135deg, #eef2ff, #f0fdfa);
+  color: #374151;
+}
+
+/* UTIL */
+.hidden {
+  display: none !important;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.blue {
+  background: #3b82f6;
+  color: white;
+}
+
+.yellow {
+  background: #facc15;
+  color: #78350f;
+}
+
+.red {
+  background: #fb7185;
+  color: white;
+}
+
+/* LOGIN */
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: white;
+  padding: 36px;
+  border-radius: 20px;
+  width: 330px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.login-card h1 {
+  color: #4f46e5;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #dbeafe;
+}
+
+.login-links {
+  margin-top: 14px;
+  color: #3b82f6;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(99, 102, 241, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-card {
+  background: white;
+  padding: 26px;
+  border-radius: 18px;
+  width: 300px;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, #60a5fa, #818cf8);
+  color: white;
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 230px;
+  background: #eef2ff;
+  padding: 16px;
+  border-right: 1px solid #e0e7ff;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: white;
+  color: #4338ca;
+  border-radius: 12px;
+  border: 1px solid #e0e7ff;
+}
+
+/* CONTENT */
+main {
+  flex: 1;
+  padding: 26px;
+}
+
+/* DASHBOARD GRID */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  padding: 22px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #6366f1;
+}
+
+.card b {
+  font-size: 32px;
+  display: block;
+  margin-top: 12px;
+  color: #1e40af;
+}
+
+/* STATUS CARD COLOR */
+.bg-total {
+  background: linear-gradient(135deg, #dbeafe, #eef2ff);
+}
+
+.bg-sent {
+  background: linear-gradient(135deg, #fef9c3, #fde68a);
+}
+
+.bg-process {
+  background: linear-gradient(135deg, #cffafe, #bae6fd);
+}
+
+.bg-done {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+/* BADGE */
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sent {
+  background: #fde68a;
+}
+
+.process {
+  background: #bae6fd;
+}
+
+.done {
+  background: #bbf7d0;
+}
