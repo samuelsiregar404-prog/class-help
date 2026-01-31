@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>CLASS-HELP | Portal Pelaporan Fasilitas Kampus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- LOGIN -->
@@ -16,13 +20,8 @@
     <input id="email" type="email" placeholder="Email Kampus">
     <input id="password" type="password" placeholder="Kata Sandi">
 
-    <button class="btn blue" type="button" onclick="login('student')">
-      Login Mahasiswa
-    </button>
-
-    <button class="btn yellow" type="button" onclick="login('technician')">
-      Login Teknisi
-    </button>
+    <button class="btn blue" onclick="login('student')">Login Mahasiswa</button>
+    <button class="btn yellow" onclick="login('technician')">Login Teknisi</button>
 
     <div class="login-links">
       <span onclick="openRegister()">Daftar Akun</span> •
@@ -31,49 +30,39 @@
   </div>
 </div>
 
-<!-- REGISTER MODAL -->
-<div id="registerModal" class="modal hidden">
-  <div class="modal-card">
-    <h3>📝 Registrasi Akun</h3>
-    <input type="text" placeholder="Nama Lengkap">
-    <input type="email" placeholder="Email Kampus">
-    <input type="password" placeholder="Kata Sandi">
-    <button class="btn blue" type="button" onclick="closeRegister()">
-      Daftar
-    </button>
-  </div>
-</div>
-
-<!-- FORGOT PASSWORD MODAL -->
-<div id="forgotModal" class="modal hidden">
-  <div class="modal-card">
-    <h3>🔑 Lupa Password</h3>
-    <input type="email" placeholder="Masukkan email terdaftar">
-    <button class="btn yellow" type="button" onclick="closeForgot()">
-      Kirim Reset
-    </button>
-  </div>
-</div>
-
 <!-- APP -->
 <div id="app" class="hidden">
-  <header class="header">
+  <div class="header">
     <h2 id="title">Dashboard</h2>
-    <button class="btn red" type="button" onclick="logout()">
-      Logout
-    </button>
-  </header>
+    <button class="btn red" onclick="logout()">Logout</button>
+  </div>
 
   <div class="layout">
-    <aside class="sidebar">
-      <div id="menu"></div>
-    </aside>
-
+    <div class="sidebar" id="menu"></div>
     <main id="content"></main>
   </div>
 </div>
 
-<!-- SCRIPT HARUS PALING BAWAH -->
+<!-- MODAL REGISTER -->
+<div id="registerModal" class="modal hidden">
+  <div class="modal-card">
+    <h3>📝 Registrasi Akun</h3>
+    <input placeholder="Nama Lengkap">
+    <input placeholder="Email Kampus">
+    <input type="password" placeholder="Kata Sandi">
+    <button class="btn blue" onclick="closeRegister()">Daftar</button>
+  </div>
+</div>
+
+<!-- MODAL FORGOT -->
+<div id="forgotModal" class="modal hidden">
+  <div class="modal-card">
+    <h3>🔑 Lupa Password</h3>
+    <input placeholder="Masukkan email terdaftar">
+    <button class="btn yellow" onclick="closeForgot()">Kirim Reset</button>
+  </div>
+</div>
+
 <script src="app.js"></script>
 
 </body>
